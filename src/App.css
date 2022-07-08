@@ -1,5 +1,7 @@
 .App {
   text-align: center;
+  display: flex;
+  align-items: center;
 }
 
 .App-logo {
@@ -24,6 +26,29 @@
   color: white;
 }
 
+.spinner {
+  animation: spin .75s linear;
+  animation-iteration-count: infinite;
+}
+
+@keyframes spin {
+  25% {
+    transform: rotate(90deg);
+  }
+
+  50% {
+    transform: rotate(180deg);
+  }
+
+  75% {
+    transform: rotate(270deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
 .App-link {
   color: #61dafb;
 }
@@ -35,4 +60,62 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.item {
+  border: 2px solid rgb(100, 118, 171);
+  background-color: rgb(180, 180, 124);
+  width: fit-content;
+  margin: 5px;
+  padding: 3px;
+  border-radius: 3px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.item img {
+  width: 150px;
+}
+#login, #loggedin {
+  display: none;
+}
+.text-overflow {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 500px;
+}
+
+.lists {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+form, form button {
+  margin: 15px;
+}
+
+.searches {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.app {
+  background-color: rgb(74, 74, 118);
+}
+
+.detail-page, .poke-detail {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.detail-page, .detail-page a {
+  background-color: rgb(13, 95, 32);
+  color: #61dafb;
 }
